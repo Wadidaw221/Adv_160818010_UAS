@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/itemHome">
+
+    <fragment
+        android:id="@+id/itemHome"
+        android:name="com.ubaya.a160818010_uts.view.news_list"
+        android:label="Home"
+        tools:layout="@layout/fragment_news_list">
+        <action
+            android:id="@+id/actionDetails"
+            app:destination="@id/news_details" />
+    </fragment>
+    <fragment
+        android:id="@+id/news_details"
+        android:name="com.ubaya.a160818010_uts.view.news_details"
+        android:label="News Details"
+        tools:layout="@layout/fragment_news_details">
+        <action
+            android:id="@+id/actionBack"
+            app:destination="@id/itemHome" />
+    </fragment>
+    <fragment
+        android:id="@+id/itemFresh"
+        android:name="com.ubaya.a160818010_uts.view.news_Fresh"
+        android:label="Fresh News"
+        tools:layout="@layout/fragment_news__fresh" />
+    <fragment
+        android:id="@+id/itemProfile"
+        android:name="com.ubaya.a160818010_uts.view.news_profile"
+        android:label="Profile"
+        tools:layout="@layout/fragment_news_profile" />
+    <fragment
+        android:id="@+id/itemCeleb"
+        android:name="com.ubaya.a160818010_uts.view.news_Celeb"
+        android:label="Celebrity Page"
+        tools:layout="@layout/fragment_news__celeb" />
+    <fragment
+        android:id="@+id/itemCovid"
+        android:name="com.ubaya.a160818010_uts.view.news_Covid"
+        android:label="Covid-19 News"
+        tools:layout="@layout/fragment_news__covid" />
+    <fragment
+        android:id="@+id/itemTrending"
+        android:name="com.ubaya.a160818010_uts.view.news_Trending"
+        android:label="Trending News"
+        tools:layout="@layout/fragment_news__trending" />
+    <fragment
+        android:id="@+id/itemPolitics"
+        android:name="com.ubaya.a160818010_uts.view.news_politics"
+        android:label="Political News"
+        tools:layout="@layout/fragment_news_politics" />
+</navigation>

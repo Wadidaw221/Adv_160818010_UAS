@@ -13,6 +13,9 @@
         <action
             android:id="@+id/actionDetails"
             app:destination="@id/news_details" />
+        <action
+            android:id="@+id/actionAddNews"
+            app:destination="@id/news_Add" />
     </fragment>
     <fragment
         android:id="@+id/news_details"
@@ -22,6 +25,9 @@
         <action
             android:id="@+id/actionBack"
             app:destination="@id/itemHome" />
+        <argument
+            android:name="newsID"
+            app:argType="integer" />
     </fragment>
     <fragment
         android:id="@+id/itemFresh"
@@ -53,4 +59,9 @@
         android:name="com.ubaya.a160818010_uts.view.news_politics"
         android:label="Political News"
         tools:layout="@layout/fragment_news_politics" />
+    <fragment
+        android:id="@+id/news_Add"
+        android:name="com.ubaya.a160818010_uts.view.news_Add"
+        android:label="fragment_news__add"
+        tools:layout="@layout/fragment_news__add" />
 </navigation>

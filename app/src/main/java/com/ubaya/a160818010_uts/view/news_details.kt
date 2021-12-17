@@ -18,10 +18,10 @@ class news_details : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        var id = news_detailsArgs.fromBundle(requireArguments()).newsID
         viewModel = ViewModelProvider(this).get(DetailViewModel::class.java)
-        viewModel.Details()
+        viewModel.displayDetail(id)
         observeModel()
-
     }
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -37,6 +37,4 @@ class news_details : Fragment() {
             txtIsiBerita1.text = it.newsText
         })
     }
-
-
 }
